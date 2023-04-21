@@ -17,12 +17,20 @@ function getClock(){
         ampm="PM";
     }
 
+    // if else can be used but it will be large
+    // hence use ternary operator
+    h= h<10 ? "0"+h : h;
+    m= m<10 ? "0"+m : m;
+    s= s<10 ? "0"+s : s;
+
+
     // this is to update the innerText of the html
     // syntax htmlelement.innerText = string/value
     hoursEl.innerText= h;
     minutesEl.innerText= m;
     secondsEl.innerText= s;
     ampmEl.innerText= ampm;
+
 
     /* funtion to setTimeout that calls the function every time gives 
         setTimeout( function/ function_name , timein ms)
